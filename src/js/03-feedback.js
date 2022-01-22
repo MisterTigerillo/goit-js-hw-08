@@ -5,18 +5,20 @@ const FEEDBACK_KEY = 'feedback-form-state';
 form.addEventListener('submit', onFormSubmit);
 form.addEventListener('input', throttle(onFormInput, 500));
 
-const storageInfo = {};
+let storageInfo = {};
 
 dataStorageReturn();
 
 function onFormInput(evt) {
   storageInfo[evt.target.name] = evt.target.value;
-
   localStorage.setItem(FEEDBACK_KEY, JSON.stringify(storageInfo));
 }
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log(storageInfo);
+  if (storageInfo.email !== undefined || storageInfo.message !== undefined) {
+    console.log(storageInfo);
+  }
+  storageInfo = {};
   evt.currentTarget.reset();
   localStorage.removeItem(FEEDBACK_KEY);
 }
