@@ -5,15 +5,15 @@
   "main": "index.js",
   "homepage": "https://mistertigerillo.github.io/goit-js-hw-08/",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /goit-js-hw-08/"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://mistertigerillo.github.io/goit-js-hw-08/"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Dmytro Gobosh",
   "license": "ISC",
   "bugs": {
     "url": "https://mistertigerillo.github.io/goit-js-hw-08/issues"
