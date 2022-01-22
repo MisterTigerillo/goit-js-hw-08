@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://mistertigerillo.github.io/goit-js-hw-08"
+    "url": "git+https://github.com/MisterTigerillo/goit-js-hw-08"
   },
   "keywords": [],
   "author": "Dmytro Gobosh",
   "license": "ISC",
   "bugs": {
-    "url": "https://mistertigerillo.github.io/goit-js-hw-08/issues"
+    "url": "https://github.com/MisterTigerillo/goit-js-hw-08/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
