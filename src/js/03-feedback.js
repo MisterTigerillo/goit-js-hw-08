@@ -23,9 +23,14 @@ function onFormSubmit(evt) {
   localStorage.removeItem(FEEDBACK_KEY);
 }
 function dataStorageReturn() {
-  const returnedInfo = JSON.parse(localStorage.getItem('feedback-form-state'));
+  const returnedInfo = JSON.parse(localStorage.getItem(FEEDBACK_KEY));
+
   if (returnedInfo) {
-    form.email.value = returnedInfo.email;
-    form.message.value = returnedInfo.message;
+    const keys = Object.keys(returnedInfo);
+
+    for (const key of keys) {
+      storageInfo[key] = returnedInfo[key];
+      form[key].value = returnedInfo[key];
+    }
   }
 }
